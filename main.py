@@ -1,4 +1,47 @@
-print("hello")
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print(lista)
+del lista[1]
+print(lista)
+del lista[0]
+print(lista)
+del lista[-1]
+print(lista)
+del lista[2:4]
+print(lista)
+
+def szamlalo():
+    for i in range(3):
+        yield i
+
+
+for szam in szamlalo():
+    print(szam)
+
+
+
+lista = ["a", "b", "c"]
+
+for index, ertek in enumerate(lista):
+    print(index, ertek)
+
+
+lista = [1, 2, 3]
+
+lista.append(4)
+print(lista)
+lista.insert(1, 10)
+print(lista)
+lista.remove(2)
+print(lista)
+elem = lista.pop()
+print("Kivett elem: " + str(elem))
+print("Lista: " + str(lista))
+lista.sort()
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
 
 # ez egy komment
 
@@ -7,6 +50,49 @@ tobbsoros
 komment
 """
 
+s = "Hello"
+
+print(s + " World")
+print(s * 2)
+print(len(s))
+print(s.upper())
+print(s.replace("H", "J"))
+print("H" in s)
+
+
+
+s = "programozas"
+
+s = "programozas, a ram memoria es a processzor hasznalata"
+
+print("ram" in s)  # tagságvizsgálat
+print(s.find("ram"))  # első előfordulás indexe
+print(s.rfind("ram"))  # utolsó előfordulás indexe
+print(s.count("ram"))  # előfordulások száma
+
+print("nincs benne" in s)  # tagságvizsgálat
+print(s.find("nincs benne"))  # első előfordulás indexe
+print(s.rfind("nincs benne"))  # utolsó előfordulás indexe
+print(s.count("nincs benne"))  # előfordulások száma
+
+
+
+elemek = ["A", "kedvenc", "ételem", "a", "pizza", "."]
+print(elemek)
+print(" ".join(elemek))
+print("_".join(elemek))
+print(",".join(elemek))
+print(" amúgy ".join(elemek))
+
+
+# szeleteléssel
+forditott = s[::-1]
+print(forditott)
+
+# listává alakítással
+lista = list(s)
+lista.reverse()
+print("".join(lista))
 x = 10
 print(x)
 x = 30
