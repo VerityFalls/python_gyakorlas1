@@ -10,15 +10,21 @@ def feldolgozas(kerdes):
             else:
                 szamjegyek[betu] = 1
 
-    return szamjegyek
+    if kerdes.endswith("?"):
+        print("Ez bizony egy kérdés")
 
-    # return kerdes[::-1]
+    if len(szamjegyek) == 0:
+        print("Ebben egy számjegy se volt")
+
+    print(f"A kerdes {kerdes.count('.')} darab pontot tartalmaz")
+
+    return szamjegyek
 
 
 while True:
     kerdes = input("Kerdes: ")
 
-    if kerdes == "exit":
+    if kerdes == "exit" or kerdes == "quit":
         print("Bye!")
         break
 
